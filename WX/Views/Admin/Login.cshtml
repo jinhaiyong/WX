@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -10,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <title>Login Page - Ace Admin</title>
+    <title>后台管理-登录</title>
 
     <meta name="description" content="用户登录页面" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -38,10 +37,8 @@
     <script src="assets/js/html5shiv.min.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
-    <title>后台管理系统</title>
 </head>
-<body class="login-layout">
+<body class="login-layout blur-login">
     <div class="main-container">
         <div class="main-content">
             <div class="row">
@@ -50,10 +47,10 @@
                         <div class="center">
                             <h1>
                                 <i class="ace-icon fa fa-leaf green"></i>
-                                <span class="red">Ace</span>
-                                <span class="white" id="id-text2">Application</span>
+                                <span class="red">企业</span>
+                                <span class="white" id="id-text2">管理系统</span>
                             </h1>
-                            <h4 class="blue" id="id-company-text">&copy; 上海XXXX信息技术有限公司</h4>
+                            <h4 class="light-blue" id="id-company-text">&copy; 上海XXXX信息技术有限公司</h4>
                         </div>
 
                         <div class="space-6"></div>
@@ -69,18 +66,18 @@
 
                                         <div class="space-6"></div>
 
-                                        <form action="/Admin/Login">
+                                        @using (Html.BeginForm("login", "admin", FormMethod.Post)) { 
                                             <fieldset>
                                                 <label class="block clearfix">
                                                     <span class="block input-icon input-icon-right">
-                                                        <input type="text" name="txtAccount" class="form-control" placeholder="用户名" />
+                                                        <input type="text" id="txtAccount" name="txtAccount" class="form-control" placeholder="用户名" />
                                                         <i class="ace-icon fa fa-user"></i>
                                                     </span>
                                                 </label>
 
                                                 <label class="block clearfix">
                                                     <span class="block input-icon input-icon-right">
-                                                        <input type="password" name="txtPassword" class="form-control" placeholder="密    码" />
+                                                        <input type="password" id="txtPassword" name="txtPassword" class="form-control" placeholder="密    码" />
                                                         <i class="ace-icon fa fa-lock"></i>
                                                     </span>
                                                 </label>
@@ -93,7 +90,7 @@
                                                         <span class="lbl"> 记住我</span>
                                                     </label>
 
-                                                    <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
                                                         <i class="ace-icon fa fa-key"></i>
                                                         <span class="bigger-110">登录</span>
                                                     </button>
@@ -101,40 +98,40 @@
 
                                                 <div class="space-4"></div>
                                             </fieldset>
-                                        </form>
+                                        }
 
-                                        <div class="social-or-login center">
-                                            <span class="bigger-110">Or Login Using</span>
-                                        </div>
+                                        @*<div class="social-or-login center">
+                                                <span class="bigger-110">Or Login Using</span>
+                                            </div>
 
-                                        <div class="space-6"></div>
+                                            <div class="space-6"></div>
 
-                                        <div class="social-login center">
-                                            <a class="btn btn-primary">
-                                                <i class="ace-icon fa fa-facebook"></i>
-                                            </a>
+                                            <div class="social-login center">
+                                                <a class="btn btn-primary">
+                                                    <i class="ace-icon fa fa-facebook"></i>
+                                                </a>
 
-                                            <a class="btn btn-info">
-                                                <i class="ace-icon fa fa-twitter"></i>
-                                            </a>
+                                                <a class="btn btn-info">
+                                                    <i class="ace-icon fa fa-twitter"></i>
+                                                </a>
 
-                                            <a class="btn btn-danger">
-                                                <i class="ace-icon fa fa-google-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div><!-- /.widget-main -->
+                                                <a class="btn btn-danger">
+                                                    <i class="ace-icon fa fa-google-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div><!-- /.widget-main -->*@
 
                                     <div class="toolbar clearfix">
                                         <div>
                                             <a href="#" data-target="#forgot-box" class="forgot-password-link">
                                                 <i class="ace-icon fa fa-arrow-left"></i>
-                                                I forgot my password
+                                                忘记密码？
                                             </a>
                                         </div>
 
                                         <div>
                                             <a href="#" data-target="#signup-box" class="user-signup-link">
-                                                I want to register
+                                                我要注册
                                                 <i class="ace-icon fa fa-arrow-right"></i>
                                             </a>
                                         </div>
@@ -281,7 +278,7 @@
     </div><!-- /.main-container -->
     <!-- basic scripts -->
     <!--[if !IE]> -->
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="~/assets/js/jquery-2.1.4.min.js"></script>
 
     <!-- <![endif]-->
     <!--[if IE]>

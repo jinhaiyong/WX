@@ -9,7 +9,7 @@ namespace WX.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }
@@ -20,7 +20,7 @@ namespace WX.Controllers
             string strAccount = fc["txtAccount"];
             string strPwd = fc["txtPassword"];
 
-            return View();
+            return View("Index");
         }
     }
 }
