@@ -13,8 +13,13 @@ namespace WX.Controllers
         {
             return View();
         }
-        public ActionResult Login()
+
+        [HttpPost]
+        public ActionResult Login(FormCollection fc)
         {
+            string strAccount = fc["txtAccount"];
+            string strPwd = fc["txtPassword"];
+
             return View();
         }
     }
