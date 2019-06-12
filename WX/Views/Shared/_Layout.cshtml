@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
+    <script src="@Url.Content("~/scripts/jquery-1.10.2.min.js")"></script>
+    <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/scripts/bootstrap.min.js")"></script>
+
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap-theme.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap-theme.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <ul id="menu">
+
+    </ul>
+    <section id="main">
+        @RenderBody()
+        <p>Copyright King 2019. All Rights Reserved.</p>
+    </section>
+</body>
+</html>
