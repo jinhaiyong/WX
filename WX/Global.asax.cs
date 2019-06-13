@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +14,7 @@ namespace WX
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer<DAL.ConnectionString>(null);//自己去配置连接字符串
         }
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
